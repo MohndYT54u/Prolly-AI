@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <title>Prolly AI</title>
+    <meta name="description" content="أريد موقعاً مشابهاً لـ Character AI و Chai ولكن باسم Prolly AI، بألوان ثيم برتقالي محمر وأسود. أريده بنفس فكرة Character AI و Chai مع تحسين التجربة." />
+    <meta name="keywords" content="Prolly AI, Character AI, Chai, محادثات ذكاء اصطناعي, روبوت محادثة" />
+    <meta itemprop="image" content="https://miaoda-screenshot-img.s3cdn.medo.dev/preview_screen/app-81cdxbgga6m9/app-81cdxbgga6m9_1765833525828_43d9.png" />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Prolly AI" />
+    <meta property="og:description" content="أريد موقعاً مشابهاً لـ Character AI و Chai ولكن باسم Prolly AI، بألوان ثيم برتقالي محمر وأسود. أريده بنفس فكرة Character AI و Chai مع تحسين التجربة." />
+    <meta property="og:image" content="https://miaoda-screenshot-img.s3cdn.medo.dev/preview_screen/app-81cdxbgga6m9/app-81cdxbgga6m9_1765833525828_43d9.png" />
+    <meta property="og:url" content="https://app-81cdxbgga6m9.appmedo.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Prolly AI" />
+    <meta property="og:locale" content="ar_AR" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Prolly AI" />
+    <meta name="twitter:description" content="أريد موقعاً مشابهاً لـ Character AI و Chai ولكن باسم Prolly AI، بألوان ثيم برتقالي محمر وأسود. أريده بنفس فكرة Character AI و Chai مع تحسين التجربة." />
+    <meta name="twitter:image" content="https://miaoda-screenshot-img.s3cdn.medo.dev/preview_screen/app-81cdxbgga6m9/app-81cdxbgga6m9_1765833525828_43d9.png" />
+    <meta name="twitter:url" content="https://app-81cdxbgga6m9.appmedo.com/" />
+    <meta name="twitter:site" content="@MiaodaAI" />
+    <meta name="theme-color" content="#FF4500" />
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://miaoda-op-sourcecode.s3.us-west-2.amazonaws.com/source_code/projects/conv-81cdxbgga6m8_1765833471720/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://miaoda-op-sourcecode.s3.us-west-2.amazonaws.com" />
+    <link rel="preconnect" href="https://miaoda-screenshot-img.s3cdn.medo.dev" />
+    <link rel="dns-prefetch" href="https://miaoda-font.cdn.bcebos.com" />
+    <script type="module" crossorigin src="https://miaoda-op-sourcecode.s3.us-west-2.amazonaws.com/source_code/projects/conv-81cdxbgga6m8_1765833471720/assets/index-CNCxLx6t.js"></script>
+    <link rel="stylesheet" crossorigin href="https://miaoda-op-sourcecode.s3.us-west-2.amazonaws.com/source_code/projects/conv-81cdxbgga6m8_1765833471720/assets/index-COiOUOXq.css" />
+    <script>
+      (function () {
+        const redirect = new URLSearchParams(location.search).get('redirect');
+        if (redirect && redirect !== location.pathname) {
+          history.replaceState(null, '', redirect);
+        }
+      })();
+    </script>
+    <link rel="stylesheet" id="fonts-code" href="https://miaoda-font.cdn.bcebos.com/static/font_v1/fonts-code.css" />
+  </head>
+  <body class="dark:bg-gray-900">
+    <div id="root"></div>
+    <script id="md-click">
+      window.mdClick = e => {
+        const target = e.target;
+        const {href, target: linkTarget} = target.dataset;
+        const appType = 'web';
+        const isBlank = linkTarget === '_blank';
+
+        if (!href) return;
+
+        e.stopPropagation();
+        e.preventDefault();
+
+        // روابط خارجية أو فتح في نافذة جديدة
+        if (isBlank || href.startsWith('http')) {
+          let finalHref = href;
+          if (appType === 'miniapp' && !href.startsWith('http')) {
+            finalHref = window.location.href.split('#')[0] + '#/' + href;
+          }
+          window.open(finalHref, linkTarget || '_self');
+          return;
+        }
+
+        // روابط داخلية
+        const finalHref = href.startsWith('/') ? href : '/' + href;
+        if (appType === 'miniapp') {
+          window.location.hash = finalHref.startsWith('#') ? finalHref : '#' + finalHref;
+          window.dispatchEvent(new HashChangeEvent('hashchange'));
+        } else {
+          window.history.pushState({}, '', finalHref);
+          window.dispatchEvent(new Event('popstate'));
+        }
+      };
+      document.addEventListener('click', window.mdClick, true);
+    </script>
+    <script id="iframe-onerror-catcher">
+      const observer = new PerformanceObserver((list) => {
+        list.getEntries().forEach((entry) => {
+          if (entry.initiatorType === 'script' && entry.responseStatus >= 400) {
+            const targetOrigin = window.location.origin;
+            window.parent.postMessage({
+              type: "RESOURCE_LOAD_ERROR",
+              name: entry.name,
+              status: entry.responseStatus
+            }, targetOrigin);
+            console.warn('[iframe-error] Resource failed:', entry.name, entry.responseStatus);
+          }
+        });
+      });
+      observer.observe({ type: 'resource', buffered: true });
+    </script>
+    <script>
+      (function () {
+        const script = document.createElement('script');
+        script.src = 'https://miaoda-resource-static.s3cdn.medo.dev/runtime-inject/domain-static/online/1.0.37.1/static/miaoda-external.js?tm=' + new Date().getTime();
+        script.async = true;
+        script.onload = function () {
+          window.miaoda.init({
+            appId: 'app-81cdxbgga6m9',
+            type: 'WEB',
+            share: {
+              title: "Prolly AI",
+              desc: "أريد موقعاً مشابهاً لـ Character AI و Chai ولكن باسم Prolly AI، بألوان ثيم برتقالي محمر وأسود. أريده بنفس فكرة Character AI و Chai مع تحسين التجربة.",
+              image: "https://miaoda-screenshot-img.s3cdn.medo.dev/preview_screen/app-81cdxbgga6m9/app-81cdxbgga6m9_1765833525828_43d9.png"
+            }
+          });
+        };
+        document.head.appendChild(script);
+      })();
+    </script>
+  </body>
+</html>
